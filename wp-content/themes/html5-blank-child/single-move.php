@@ -9,6 +9,7 @@
 
     $onBlock = types_render_field('on-block');
     $onHit = types_render_field('on-hit');
+    $comboArray = array();
 
     function advantageClass($number) {
         if ($number > 0) return 'plus-on-block'; elseif ($number < 0) return 'minus-on-block'; else return '';
@@ -62,11 +63,37 @@
     );
 
     $other_moves = get_posts( $args );
-    var_dump($other_moves);
     
 ?>
 
 <?php endwhile;
+
+$args = toolset_get_parent_post_by_type( get_the_id(), 'character' );
+$parent_post_again = get_post( toolset_get_parent_post_by_type( $args, 'character' ) );
+
+$sibling_moves_id = toolset_get_related_posts( $args, array('character', 'move'), 'parent', 100, 0, array(), 'post_id', 'child' );
+
+foreach ($sibling_moves_id as $sibling_move) {
+    $iterated_move = get_post($sibling_move);
+    if ( $iterated_move->post_status == 'publish' && (int)types_render_field('on-hit') >= (int)types_render_field('startup', array("id"=> "$iterated_move->ID")) ) {
+        $iterated_move->title = types_render_field('move_name', array("id"=> "$iterated_move->ID"));
+        $iterated_move->startup = types_render_field('startup', array("id"=> "$iterated_move->ID"));
+        array_push($comboArray, $iterated_move);
+    }
+}
+
+if (count($comboArray) > 0):
+?>
+<h1 class="combo-title">Combos Into</h1>
+<?php foreach ($comboArray as $move) { ?>
+<div class="combo-row">
+    <p><strong><?php echo $move->title?></strong></p>
+    <p><?php echo $move->startup?> frame startup</p>
+</div>
+<?php
+}
+
+endif;
 get_footer();
 
 ?>

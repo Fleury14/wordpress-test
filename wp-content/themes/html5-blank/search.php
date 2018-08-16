@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php get_header();
+global $wp_query;
+$wp_query->posts = array_filter($wp_query->posts, 'removeMovesAndPages');
+$wp_query->found_posts = count($wp_query->posts);
+
+function removeMovesAndPages($post) {
+	if ($post->post_type == 'move' || $post->post_type == 'character' || $post->post_type == 'page')
+		return false; else return true;
+}
+?>
 
 	<main role="main">
 		<!-- section -->

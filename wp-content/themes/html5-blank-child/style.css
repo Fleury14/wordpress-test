@@ -197,6 +197,20 @@ article {
     margin: 0;
 }
 
+.combo-title {
+    text-align: center;
+}
+
+.combo-row {
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: #165748;
+    padding: 5px 20px;
+    font-size: 18px;
+}
+
 /* END SINGLE MOVE */
 
 /* BEGIN COMMENTS */
