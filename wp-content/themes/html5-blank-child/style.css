@@ -1,0 +1,299 @@
+/*
+ Theme Name:   HTML5 Blank Child
+ Theme URI:    http://example.com/thing/
+ Description:  HTML Blank Child Theme
+ Author:       J.R. Ruggiero
+ Author URI:   http://example.com
+ Template:     html5-blank
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  html5-blank-child
+*/
+
+body {
+    background: linear-gradient(to left, #29a387, #278a6a);
+    margin-top: -25px;
+    padding-top: 25px;
+}
+
+.ryu-bg {
+    background: url('ryu.jpg');
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.25;
+}
+
+header {
+    margin-top: 25px;
+}
+
+.main-section {
+    margin-top: 50px;
+}
+
+nav {
+    width: 100%;
+    background-color: #eee;
+    height: 75px;
+    color: #29a387;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar h1 {
+    color: #165748;
+    font-size: 32px;
+    margin: 0;
+}
+
+.bottom-nav {
+    background-color: #165748;
+    height: 30px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.bottom-nav h2 {
+    transition: 0.3s all;
+    margin-right: 50px;
+}
+
+.bottom-nav h2:hover {
+    color: rgb(231, 217, 12);
+}
+
+h1, h2, h3, p, span, a {
+    color: #eee;
+}
+
+/* LOOP STYLES */
+.news-title {
+    border-bottom: 4px solid #165748;
+    text-shadow: 2px 2px 2px #165748;
+    display: inline;
+}
+
+article {
+    background-color: hsla(161, 56%, 35%, 0.85);
+    box-shadow: 4px 4px 4px #165748;
+    margin-bottom: 20px;
+}
+
+/* BEGIN NEWS  */
+
+.post-title {
+    background-color: #165748;
+    padding: 5px;
+}
+
+.news-post-body {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.news-text {
+    font-weight: 500;
+}
+
+.date {
+    margin-top: 0;
+    font-weight: 500;
+}
+
+/* END NEWS */
+
+/* BEGIN PAGES */
+
+.type-page {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* END PAGES */
+
+/* SINGLE POST STYLES */
+
+.single-title {
+    background-color: #165748;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.single-date-line span, .single-date-line p {
+    color: #165748;
+}
+
+.single-date-line a {
+    text-decoration: underline;
+    color: #165748;
+    font-weight: 500;
+    transition: 0.3s all;
+}
+
+.single-date-line a:hover {
+    color: #3af5c9;
+}
+
+.single-date-line {
+    background-color: #eee;
+    color: #165748;
+    margin-top: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.post-body {
+    padding: 50px 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* END SINGLE POST */
+
+/* BEGIN SINGLE MOVE */
+
+.single-move-h1 {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.single-move-top-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.single-move-card {
+    background-color: #165748;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-move-card-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.single-move-card-data {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* END SINGLE MOVE */
+
+/* BEGIN COMMENTS */
+
+    .comments {
+        background-color: hsla(162, 56%, 27%, 0.75);
+        display: flex;
+    }
+
+    .comments h1 {
+        margin-top: 0;
+    }
+
+    .comments-left {
+        padding: 10px;
+        width: 50%;
+    }
+
+    .comments-right {
+        padding: 10px;
+        width: 50%;
+    }
+
+    .comment-text {
+        font-weight: 400;
+    }
+
+/* END COMMENTS */
+
+/* BEGIN FRAME DATA */
+
+.frame-data {
+    background-color: #165748;
+    padding: 5px;
+    display: block;
+    margin-bottom: 0;
+}
+
+.cell {
+    width: 100px;
+    text-align: center;
+}
+
+.frame-data-header-row {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plus-on-block {
+    color: #00ff2ae0;
+}
+
+.minus-on-block {
+    color: #ff0000cc;
+}
+
+.frame-data-body {
+    background-color: hsla(162, 56%, 27%, 0.75);
+    margin-top: 0;
+    box-shadow: 3px 3px 3px #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.frame-data-body-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    transition: 0.5s all;
+}
+
+.frame-data-body-row:hover {
+    background-color: #165748;
+}
+
+/* END FRAME DATA */
+
+.character-card {
+    height: 200px;
+    width: 200px;
+    background-color: #ddd;
+    box-shadow: 5px 5px 5px #333;
+    color: #333;
+    margin-left: 50px;
+}
+
+.character-card h2 {
+    color: #278a6a;
+    text-align: center;
+}
+
+.character-card-container {
+    display: flex;
+}
+
+.character-thumbnail {
+    margin-left: 25px;
+}
